@@ -1,5 +1,17 @@
+Name: foobar-dkms
+Version: 0.1
+Release: 1%{?dist}
+Summary: A simple kernel driver
+BuildArch: noarch
+License: GPLv3+
+URL: https://foo.bar
 Source: %{module}-%{version}.tar.gz
 Patch0: foobar.patch
+
+Requires: dkms
+
+%description
+Nothing to see here
 
 %prep
 %setup -n %{module}-%{version} -q
